@@ -1,0 +1,56 @@
+
+<ion-view view-title="Add New User">
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="list">
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Name</span>
+      <input type="text" ng-model="employee.name" placeholder="Name">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">User Type</span>
+      <div>
+      <select style="width:100%;border:none;background-color:white" class="button-light"  ng-model="employee.empType">
+      <option value="2">Admin/Employer</option>
+      <option value="1" selected>User/Employee</option>
+    </select>
+    </div>
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Email</span>
+      <input  type="text" placeholder="abc@abc.com" ng-model="employee.emailId">
+    </label>
+     <label class="item item-input item-stacked-label">
+      <span class="input-label">Address</span>
+      <textarea  type="text" ng-model="employee.address" placeholder=""></textarea>
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Mobile No</span>
+      <input type="text" placeholder="9912345678" ng-model="employee.phone">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">User Name</span>
+      <input type="text" placeholder="UserName" ng-model="employee.username">
+    </label>
+     <label class="item item-input item-stacked-label">
+      <span class="input-label">Password</span>
+      <input type="password" placeholder="" ng-model="employee.password">
+    </label>
+  </div>
+  <div class="pull-right" style="text-align:center">
+  <button class="button button-positive pull-right" ng-click="submit()">
+  Submit
+</button>
+<button class="button  button-balanced pull-right" ng-click="reset()">
+  Reset
+</button>
+
+  </div>
+  <div style="text-align:center">
+    <label class="{{fontcolor}}">{{responseMessage}}</label>
+  </div>
+
+  </ion-content>
+</ion-view>

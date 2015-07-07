@@ -1,0 +1,34 @@
+
+<ion-view view-title="View Expense">
+<ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-trash-b" ng-click="showConfirm()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="list">
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Expense Category</span>
+      <div>
+      <select style="width:100%;border:none" ng-model="expense.category" disabled="disabled">
+            <option value="0">Select</option>
+            <option value="Fuel">Fuel</option>
+            <option value="Labor">Labor</option>
+            <option value="Raw Material">Raw Material</option>
+            <option value="Others">Others/option>
+      </select>
+    </div>
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Details</span>
+      <textarea  type="text" ng-model="expense.details" disabled="disabled"placeholder=""></textarea>
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Expense</span>
+      <input  type="text" placeholder="898453" disabled="disabled" ng-model="expense.expense">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Date</span>
+      <input type="date" placeholder="25/06/2015" disabled="disabled" ng-model="expense.actiondate">
+    </label>
+  </div>
+  </ion-content>
+</ion-view>

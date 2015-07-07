@@ -1,0 +1,22 @@
+<ion-view view-title="Tasks" cache-view="false">
+
+<div class="bar bar-subheader">
+  <h2 class="title">{{tasks.name}}</h2>
+</div>
+  <ion-content>
+  <br/><br/>
+      <ion-list>
+      <ion-item class="item-remove-animate item-divider-calm item-icon-right" ng-repeat="task in tasks.tasks" type="item-text-wrap" href="#/tab/expenses/{{task._id}}/{{tasks._id}}">
+        <h2>{{task.name}}</h2>
+        <p ng-if="empType===2">₹{{task.budget}}</p>
+        <p>{{task.startDate | date : 'dd/MM/yyyy' }} - {{task.endDate | date : 'dd/MM/yyyy' }}</p>
+        <p>{{getEmployeeName(task.assignedTo)}}</p>
+        <i class="icon ion-chevron-right  icon-accessory"></i>
+        <!--<div class="button-bar  button-clear">
+          <a class="button button-large button-clear button-energized" href="#/tab/tasks/edit/{{task._id}}"><i class="ion-edit"></i></a>
+           <a class="button button-large button-clear button-assertive" ng-click="delete(task._id,$index)"><i class="ion-trash-b"></i></a>
+        </div>-->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

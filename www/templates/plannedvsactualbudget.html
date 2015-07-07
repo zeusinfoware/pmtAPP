@@ -1,0 +1,27 @@
+ 
+<ion-view view-title="Planned VS Actual" cache-view="false" ng-init="getPlannedVsActual();">
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content>
+  <div class="pull-right" style="bottom:0px;">
+ 	<div class="list">
+	  <label class="item item-input item-select">
+		    <div class="input-label positive">
+		      Chart Type
+		    </div>
+		    <select ng-model="type" >
+		      <option selected="">Bar</option>
+		      <option >Line</option>
+		    </select>
+		  </label>
+
+	</div>
+ </div>
+ 
+ <canvas id="bar" class="chart-base" chart-type="type" data="graph.data" labels="graph.labels" series='graph.series' ></canvas>
+
+ </ion-content>
+ 
+ </ion-view>
+ 

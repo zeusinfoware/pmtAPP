@@ -1,0 +1,44 @@
+
+<ion-view view-title="Add Expense">
+  <ion-content>
+    <div class="list">
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Expense Category</span>
+      <div>
+      <select style="width:100%;border:none;background-color:white" class="button-light"  ng-model="expense.category" >
+            <option value="0">Select</option>
+            <option value="Fuel">Fuel</option>
+            <option value="Labor">Labor</option>
+            <option value="Raw Material">Raw Material</option>
+            <option value="Others">Others/option>
+      </select>
+    </div>
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Details</span>
+      <textarea  type="text" ng-model="expense.details" placeholder=""></textarea>
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Expense</span>
+      <input  type="text" placeholder="898453" ng-model="expense.expense">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Date</span>
+      <input type="date" placeholder="25/06/2015" ng-model="expense.actiondate">
+    </label>
+  </div>
+  <div class="pull-right" style="text-align:center">
+  <button class="button button-positive pull-right" ng-click="submit()">
+  Submit
+</button>
+<button class="button  button-balanced pull-right" ng-click="reset()">
+  Reset
+</button>
+
+  </div>
+  <div style="text-align:center">
+    <label class="{{fontcolor}}">{{responseMessage}}</label>
+  </div>
+
+  </ion-content>
+</ion-view>

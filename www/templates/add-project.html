@@ -1,0 +1,54 @@
+
+<ion-view view-title="Add New Project">
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="list">
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Name</span>
+      <input type="text" ng-model="project.name" placeholder="Chalet">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Description</span>
+      <textarea  type="text" ng-model="project.description" placeholder=""></textarea>
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Type</span>
+      <div>
+      <select style="width:100%;border:none;background-color:white" class="button-light" ng-model="project.type">
+      <option>Apartment</option>
+      <option selected>House</option>
+      <option>Office</option>
+      <option>others</option>
+    </select>
+    </div>
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Budget</span>
+      <input  type="text" placeholder="898453" ng-model="project.budget">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Start Date</span>
+      <input type="date" placeholder="25/06/2015" ng-model="project.startdate">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">End Date</span>
+      <input type="date" placeholder="10/01/2016" ng-model="project.enddate">
+    </label>
+  </div>
+  <div class="pull-right" style="text-align:center">
+  <button class="button button-positive pull-right" ng-click="submit()">
+  Submit
+</button>
+<button class="button  button-balanced pull-right" ng-click="reset()">
+  Reset
+</button>
+
+  </div>
+  <div style="text-align:center">
+    <label class="{{fontcolor}}">{{responseMessage}}</label>
+  </div>
+
+  </ion-content>
+</ion-view>

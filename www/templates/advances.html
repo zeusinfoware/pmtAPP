@@ -1,0 +1,30 @@
+<ion-view view-title="Advances" cache-view="false">
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-content>
+
+      <ion-list>
+       <label class="item item-input item-stacked-label">
+      <span class="input-label">Advance To</span>
+      <div>
+      <select style="width:100%;border:none;background-color:white" class="button-light"  ng-model="advancetoWhom">
+            <option>Select</option>option>
+            <option ng-repeat="employee in employees" value="{{employee.name}}">{{employee.name}}</option>
+      </select>
+    </div>
+    </label>
+      <ion-item class="item-remove-animate item-divider-calm" ng-repeat="advance in advances | filter:advancetoWhom" type="item-text-wrap">
+        <p>{{advance.advancetoWhom}}</p>
+        <p>{{advance.advanceMode}}</p>
+        <p>{{advance.description}}</p>
+        <p>{{advance.advanceDate | date : 'dd/MM/yyyy' }}</p>
+        <span class="badge badge-assertive badge-large" style="{width:50%}">₹{{advance.advanceAmount}}</span>
+          
+        
+      </ion-item>
+    
+    </ion-list>
+  </ion-content>
+</ion-view>

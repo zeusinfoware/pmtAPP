@@ -1,0 +1,25 @@
+
+<ion-view view-title="PMT Login">
+  <ion-content style="align:center;top:30%">
+    <div class="list">
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">User Name</span>
+      <input type="text" ng-model="loginParams.username" placeholder="User Name">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Password</span>
+      <input  type="password" placeholder="Password" ng-model="loginParams.password">
+    </label>
+  </div>
+  <div class="pull-right" style="text-align:center">
+  <button class="button button-positive pull-right" ng-click="login()">
+  Login
+</button>
+<button class="button  button-balanced pull-right">
+  Cancel
+</button>
+
+  </div>
+  
+  </ion-content>
+</ion-view>

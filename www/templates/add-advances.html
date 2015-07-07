@@ -1,0 +1,61 @@
+
+<ion-view view-title="Add Advance">
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="list">
+        <label class="item item-input item-stacked-label">
+        <span class="input-label">Advance Mode</span>
+        <div>
+            <select style="width:100%;border:none;background-color:white" class="button-light"  ng-model="advance.advanceMode" >
+                <option value="Cash" selected="">Cash</option>
+                <option value="Cheque">Cheque</option>
+                <option value="On-line transfer">On-line transfer</option>
+                <option value="Others">Others/option>
+          </select>
+        </div>
+        </label>
+
+      
+      <label class="item item-input item-stacked-label">
+      <span class="input-label">Advance To</span>
+      <div>
+      <select style="width:100%;border:none;background-color:white" class="button-light"  ng-model="advance.advancetoWhom">
+            <option>Select</option>option>
+            <option ng-repeat="employee in employees" value="{{employee.name}}">{{employee.name}}</option>
+      </select>
+    </div>
+    </label>
+
+    
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Advance Amount</span>
+      <input  type="text" placeholder="1250" ng-model="advance.advanceAmount">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Details</span>
+      <textarea  type="text" ng-model="advance.description" placeholder=""></textarea>
+    </label>
+    
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Date</span>
+      <input type="date" placeholder="25/06/2015" ng-model="advance.advanceDate">
+    </label>
+  </div>
+  <div class="pull-right" style="text-align:center">
+  <button class="button button-positive pull-right" ng-click="submit()">
+  Submit
+</button>
+  <button class="button  button-balanced pull-right" ng-click="reset()">
+    Reset
+  </button>
+
+  </div>
+  <div style="text-align:center">
+    <label class="{{fontcolor}}">{{responseMessage}}</label>
+  </div>
+
+  </ion-content>
+</ion-view>

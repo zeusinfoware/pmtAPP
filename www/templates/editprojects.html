@@ -1,0 +1,25 @@
+
+<ion-view cache-view="false" view-title="Edit Projects" ng-controller="ProjectCtrl">
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content>
+  <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="loadProjects()">
+  </ion-refresher>
+      <ion-list>
+      <ion-item  class="item-remove-animate item-divider-calm item-icon-right" ng-repeat="project in projects" type="item-text-wrap" href="#/tab/account/editProjects/{{project._id}}">
+        <h2>{{project.name}}</h2>
+        <p>{{project.type}}</p>
+        <p>₹{{project.budget}}</p>
+        <p>{{project.startDate | date : 'dd/MM/yyyy' }} - {{project.endDate | date : 'dd/MM/yyyy' }}</p>
+        <i class="icon ion-chevron-right  icon-accessory"></i>
+        <!--<div class="button-bar  button-clear">
+          <a class="button button-large button-clear button-energized" href="#/tab/projects/edit/{{project._id}}"><i class="ion-edit"></i></a>
+           <a class="button button-large button-clear button-assertive" ng-click="delete(project._id,$index)"><i class="ion-trash-b"></i></a>
+        </div>-->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

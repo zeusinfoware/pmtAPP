@@ -1,0 +1,18 @@
+<ion-view view-title="Edit Tasks" cache-view="false">
+
+<div class="bar bar-subheader">
+  <h2 class="title">{{tasks.name}}</h2>
+</div>
+  <ion-content>
+  <br/><br/>
+      <ion-list>
+      <ion-item class="item-remove-animate item-divider-calm item-icon-right" ng-repeat="task in tasks.tasks" type="item-text-wrap" href="#/tab/account/editTask/{{task._id}}/{{tasks._id}}">
+        <h2>{{task.name}}</h2>
+        <p>₹{{task.budget}}</p>
+        <p>{{task.startDate | date : 'dd/MM/yyyy' }} - {{task.endDate | date : 'dd/MM/yyyy' }}</p>
+        <p>{{getEmployeeName(task.assignedTo)}}</p>
+        <i class="icon ion-chevron-right  icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,37 @@
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-assertive">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-energized">
+      <h1 class="title">Options</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list >
+        <ion-item nav-clear menu-close href="#/tab/account/addProject" class="item-icon-left">
+         <i class="icon  ion-document"></i> Add Project
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/tab/account/editProjects" class="item-icon-left">
+          <i class="icon  ion-document-text"></i> Edit Project
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/tab/account/addUser" class="item-icon-left">
+          <i class="icon  ion-ios-people-outline"></i> Add Employee
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/tab/account/editUsers" class="item-icon-left">
+          <i class="icon  ion-person"></i> Edit Employee
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/tab/account/advances" class="item-icon-left">
+          <i class="icon  ion-person"></i> Advances
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/tab/account/addAdvance" class="item-icon-left">
+          <i class="icon  ion-person"></i> Add Advance
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

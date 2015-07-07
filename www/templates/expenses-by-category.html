@@ -1,0 +1,38 @@
+
+.   
+<ion-view view-title="Expenses By Category" cache-view="false" ng-init="getExpensesByCategory();">
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content>
+  <div class="pull-right" style="bottom:0px;">
+ 	<div class="list">
+ 	 <label class="item item-input item-select">
+		    <div class="input-label positive">
+		      Project
+		    </div>
+		    <select style="width:100%;border:none" ng-model="selectedProject.project" ng-options="project.name for project in projects" ng-change="getExpensesByCategory();">
+		    <option selected="">All Projects</option>
+      		</select>
+      	
+		  </label>
+	  <label class="item item-input item-select">
+		    <div class="input-label positive">
+		      Chart Type
+		    </div>
+		    <select ng-model="type" >
+		      <option selected="">Pie</option>
+		      <option >Doughnut</option>
+		      <option >PolarArea</option>
+		    </select>
+		  </label>
+
+	</div>
+ </div>
+ 
+ <canvas id="bar" class="chart-base" chart-type="type" data="graph.data1" labels="graph.labels1" legend="true" ></canvas>
+
+ </ion-content>
+ 
+ </ion-view>
+ 

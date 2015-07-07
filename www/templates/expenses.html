@@ -1,0 +1,26 @@
+<ion-view view-title="Expenses" cache-view="false">
+<ion-nav-buttons side="secondary">
+<a class="button icon  button-clear button-small ion-plus" href="#/tab/addExpense/{{expenses._id}}/{{projectId}}"></a>
+</ion-nav-buttons>
+<div class="bar bar-subheader">
+  <h2 class="title">{{expenses.name}}</h2>
+</div>
+  <ion-content>
+  <br/><br/>
+      <ion-list>
+      <ion-item class="item-remove-animate item-divider-calm" ng-repeat="expense in expenses.taskbreakups" type="item-text-wrap" href="#/tab/expenses/{{expenses._id}}/{{expense._id}}">
+        <h2>{{expense.expenseCategory}}</h2>
+        <p>{{expense.actionDate | date : 'dd/MM/yyyy' }}</p>
+        <span class="badge badge-assertive badge-large" style="{width:50%}">₹{{expense.expense}}</span>
+          {{expense.expenseDetails}}
+        
+        
+      </ion-item>
+      <ion-item>
+      <h2 class="positive subheader">Total Expenses</h2>
+      <span class="badge badge-assertive badge-large" style="{width:50%}">₹{{totalExpense}}</span>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>
